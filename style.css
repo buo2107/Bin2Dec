@@ -101,29 +101,44 @@ body {
 .card {
     height: 24rem;
     grid-row-end: span 2;
-    border: 3px dashed #e3bc34;
     border-radius: 10px;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.15);
+    background-color: #fcd64e;
     padding: 4.8rem 1.6rem;
 
     display: flex;
     flex-direction: column;
     gap: 30%;
+
+    transition: all linear 1s;
     /* grid-template-rows: 1fr 2fr; */
     /* justify-content: center; */
     /* align-items: center; */
+}
+
+.card_active {
+    box-shadow:  0 1.2rem 1.8rem rgba(0, 0, 0, 0.3);
 }
 
 .selector_container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
+    justify-content: center;
     column-gap: 8px;
 }
 
 .select-icon {
     display: block;
     width: auto;
-    font-size: 2.4rem;
+    font-size: 3.0rem;
+    color: #52555f;
+}
+
+.select-icon-active {
+    color: #393d48;
+    /* <ion-icon name="chevron-back-circle"></ion-icon> */
+    /* <ion-icon name="chevron-forward-circle"></ion-icon> */
 }
 
 .card_title {
