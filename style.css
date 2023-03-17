@@ -1,0 +1,134 @@
+/* Design Decision
+
+--- 01 TYPOFRAPHY SYSTEM
+
+- Font size(px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weight:
+Default: 400
+
+- Line height:
+Default: 1
+
+- Letter spacing
+
+--- 02 COLORS
+
+- Primary: #fcd13a
+- Tints: #fcd64e #fdda61
+- Shades: #e3bc34 #322a0c
+- Accents:
+- Grays:
+    #080c1a
+    #212431
+    #393d48
+
+--- 03 IMAGES
+Unsplash.com to find and download images
+UI Face
+
+--- 04 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.88)
+
+--- 05 BORDER_RADIUS
+
+Default: 10px
+
+--- 06 WHITESPACE
+
+- Spacing system (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: 'Inter', sons-serif;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fcd13a;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    padding: 2.4rem 4.8rem;
+}
+
+.heading_primary {
+    font-size: 7.4rem;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    color: #322a0c;
+}
+
+.section_convert {
+    padding: 1.6rem 3.2rem;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 4.8rem;
+    background-color: #fef6d8;
+    border-radius: 10px;
+}
+
+.converter_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.card {
+    height: 24rem;
+    grid-row-end: span 2;
+    border: 1px solid black;
+    padding: 1.6rem;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-icon {
+    display: block;
+    width: auto;
+    font-size: 2.4rem;
+}
+
+.card_title {
+    font-size: 3.0rem;
+    font-weight: 600;
+    color: #322a0c;
+    letter-spacing: -0.8px;
+}
+
+.arrow-icon {
+    display: block;
+    width: auto;
+    font-size: 2.4rem;
+}
+
+.arrow_left {
+    grid-column: 2/3;
+    grid-row-start: 2;
+}
