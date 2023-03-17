@@ -2,7 +2,7 @@
 
 **Progress:** Undone
 
-**Architecture**
+**Architecture:** MVC
 
 Idea from [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)
 
