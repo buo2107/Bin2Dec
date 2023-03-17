@@ -70,6 +70,7 @@ body {
 }
 
 .heading_primary {
+    font-family: 'Carter One', cursive;
     font-size: 7.4rem;
     font-weight: 700;
     letter-spacing: -0.6px;
@@ -126,10 +127,10 @@ body {
 }
 
 .card_title {
-    font-size: 3.0rem;
-    font-weight: 600;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3.6rem;
+    font-weight: 500;
     color: #322a0c;
-    letter-spacing: -0.8px;
 }
 
 .arrow-icon {
