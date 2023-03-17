@@ -85,7 +85,7 @@ body {
     margin: 0 auto;
     padding: 4.8rem;
     background-color: #fef6d8;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .converter_container {
@@ -100,13 +100,23 @@ body {
 .card {
     height: 24rem;
     grid-row-end: span 2;
-    border: 1px solid black;
-    padding: 1.6rem;
+    border: 3px dashed #e3bc34;
+    border-radius: 10px;
+    padding: 4.8rem 1.6rem;
 
+    display: flex;
+    flex-direction: column;
+    gap: 30%;
+    /* grid-template-rows: 1fr 2fr; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.selector_container {
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    justify-content: center;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
+    column-gap: 8px;
 }
 
 .select-icon {
