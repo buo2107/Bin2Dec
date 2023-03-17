@@ -110,13 +110,10 @@ body {
     flex-direction: column;
     gap: 30%;
 
-    transition: all linear 1s;
-    /* grid-template-rows: 1fr 2fr; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    transition: all linear 0.5s;
 }
 
-.card_active {
+.card:hover {
     box-shadow:  0 1.2rem 1.8rem rgba(0, 0, 0, 0.3);
 }
 
@@ -133,9 +130,10 @@ body {
     width: auto;
     font-size: 3.0rem;
     color: #52555f;
+    transition: all 0.5s;
 }
 
-.select-icon-active {
+.select-icon:hover {
     color: #393d48;
     /* <ion-icon name="chevron-back-circle"></ion-icon> */
     /* <ion-icon name="chevron-forward-circle"></ion-icon> */
@@ -151,7 +149,7 @@ body {
 .arrow-icon {
     display: block;
     width: auto;
-    font-size: 2.4rem;
+    font-size: 4.8rem;
 }
 
 .arrow_left {
