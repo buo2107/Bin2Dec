@@ -99,7 +99,7 @@ body {
 }
 
 .card {
-  height: 24rem;
+  height: 20rem;
   grid-row-end: span 2;
   border-radius: 10px;
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.15);
@@ -108,6 +108,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30%;
 
   transition: all linear 0.5s;
@@ -117,37 +118,30 @@ body {
   box-shadow: 0 1.2rem 1.8rem rgba(0, 0, 0, 0.3);
 }
 
-.card_left:hover ~ .arrow_right{
-  fill: red;
-}
-
-.card_right:hover ~ .arrow_left {
-  fill: red;
-}
-
 .selector_container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
   justify-content: center;
-  column-gap: 8px;
+  column-gap: 2.4rem;
 }
 
 .btn {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  cursor: pointer;
 }
 
 .select-icon {
   display: block;
   width: 100%;
-  fill: #52555f;
+  fill: rgba(82, 85, 95, 0.7);
 
   transition: all 0.5s;
 }
 
 .btn:hover .select-icon {
-  fill: #393d48;
+  fill: #322a0c;
 }
 
 .card_title {
@@ -162,6 +156,13 @@ body {
   width: 100%;
   height: 40%;
   fill: #52555f;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+
+.arrow_right {
+  grid-column: 2/3;
+  grid-row-start: 1;
 }
 
 .arrow_left {
@@ -169,6 +170,17 @@ body {
   grid-row-start: 2;
 }
 
+.card_left:hover ~ .arrow_right,
+.card_right:hover ~ .arrow_left {
+  opacity: 1;
+}
+
 .input {
-  height: 100%;
+  width: 90%;
+  height: 30%;
+  font-size: 2.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #fef6d8;
+  font-family: "Inter", sons-serif;
 }
