@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./src/js/model.js"></script>
     <title>Binary to Decimal Converter</title>
   </head>
   <body>
@@ -56,6 +57,9 @@
               </button>
             </div>
             <input class="input input_binary" maxlength="15" type="text" />
+            <div class="message_container hidden">
+              <p class="errMsg">Can only enter 0s or 1s.</p>
+            </div>
           </div>
 
           <!-- Decimal input field -->
@@ -92,6 +96,9 @@
               </button>
             </div>
             <input type="text" maxlength="15" class="input input_decimal" />
+            <div class="message_container hidden">
+              <p class="errMsg">Can only enter 0s or 1s.</p>
+            </div>
           </div>
 
           <!-- Arrow icons or images -->

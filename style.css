@@ -104,12 +104,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.15);
   background-color: #fcd64e;
-  padding: 4.8rem 1.6rem;
+  padding: 3.2rem 1.6rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30%;
+  justify-content: space-between;
 
   transition: all linear 0.5s;
 }
@@ -183,4 +183,15 @@ body {
   border: none;
   background-color: #fef6d8;
   font-family: "Inter", sons-serif;
+}
+
+.message_container {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b30707;
+}
+
+.hidden {
+  opacity: 0;
+  /* display: none; */
 }
