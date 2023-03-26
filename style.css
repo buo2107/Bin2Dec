@@ -186,6 +186,7 @@ body {
 }
 
 .message_container {
+  height: 15%;
   font-size: 1.2rem;
   font-weight: 600;
   color: #b30707;
