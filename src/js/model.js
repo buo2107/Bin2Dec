@@ -31,3 +31,6 @@ inputBinary.addEventListener("keyup", function () {
   const output = parseInt(input, 2);
   inputDecimal.value = !isNaN(output) ? output : "";
 });
+
+// 2. Decimal to Binary
+inputDecimal.addEventListener("keyup", function () {});
