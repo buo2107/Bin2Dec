@@ -1,41 +1,25 @@
-// // 1. Binary to Decimal
-// const inputBinary = document.querySelector(".input_binary");
-// const inputDecimal = document.querySelector(".input_decimal");
-
-// // get the value that user entered
-// inputBinary.addEventListener("keyup", function () {
-//   const input = this.value;
-//   const msg = this.nextElementSibling;
-//   // data verification: check input only contains 0 & 1
-
-//   // check NO:
-//   if (
-//     input.length !== 0 &&
-//     input.slice(-1) !== "0" &&
-//     input.slice(-1) !== "1"
-//   ) {
-//     // show error message
-//     msg.classList.remove("hidden");
-
-//     // lock up the input area
-//     this.setAttribute("maxlength", input.length);
-//     return;
-//   }
-
-//   // check OK: show output in inputDecimal
-//   msg.classList.add("hidden");
-//   this.setAttribute("maxlength", 15);
-
-//   const output = parseInt(input, 2);
-//   inputDecimal.value = !isNaN(output) ? output : "";
-// });
-export const verficateInput = function (data) {
-  if (data.length !== 0 && data.slice(-1) !== "0" && data.slice(-1) !== "1")
+export const verficateInput = function (data, type) {
+  if (
+    type !== 3 &&
+    data.length !== 0 &&
+    data.slice(-1) !== "0" &&
+    data.slice(-1) !== "1"
+  )
     return false;
 
   return true;
 };
 
-export const convert = function (data) {
-  return parseInt(data, 2);
+export const convert = function (data, type) {
+  switch (type) {
+    // binary
+    case 0:
+      return parseInt(data, 2);
+    // octal
+    case 1:
+      return parseInt(data, 8);
+    // hexadecimal
+    case 2:
+      return parseInt(data, 16);
+  }
 };

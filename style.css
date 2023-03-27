@@ -109,9 +109,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
+  gap: 10%;
 
   transition: all linear 0.5s;
+
+  position: relative;
 }
 
 .card:hover {
@@ -119,17 +123,27 @@ body {
 }
 
 .selector_container {
+  height: 5rem;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 5fr 2fr;
   align-items: center;
   justify-content: center;
   column-gap: 2.4rem;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
+}
+
+.btn_right {
+  grid-column: 3/4;
 }
 
 .select-icon {
@@ -149,6 +163,11 @@ body {
   font-size: 4rem;
   font-weight: 500;
   color: #322a0c;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .arrow-icon {
@@ -198,4 +217,8 @@ body {
 .hidden {
   opacity: 0;
   /* display: none; */
+}
+
+.nondisplay {
+  display: none;
 }
