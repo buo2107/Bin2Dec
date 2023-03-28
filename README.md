@@ -1,4 +1,4 @@
-# Multiplex Converter
+# Multifunction Converter
 
 **Progress:** Finished
 
