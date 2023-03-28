@@ -20,7 +20,7 @@ const controlEnter = function () {
     this.outputRender(output);
   } else {
     // false: render error message and lock up the input field
-    this.errorRender();
+    this.errorRender(inputType);
   }
 };
 

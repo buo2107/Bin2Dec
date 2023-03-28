@@ -1,3 +1,4 @@
+import { DECIMAL } from "./config.js";
 import View from "./view.js";
 
 class RightCardView extends View {
@@ -6,7 +7,7 @@ class RightCardView extends View {
   _messageContainer = document.querySelector(
     ".card_right > .message_container"
   );
-  _curSlide = 3;
+  _curSlide = DECIMAL;
   slides = document.querySelectorAll(".card_right .card_title");
   btnContainer = document.querySelector(".card_right .selector_container");
   _maxSlide = this.slides.length - 1;

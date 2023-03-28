@@ -1,8 +1,8 @@
+import { BINARY, OCTAL, HEXADECIMAL, DECIMAL } from "./config.js";
 export default class View {
   _inputElement;
   _outputElement;
   _messageContainer;
-  _errMsg = "Can only enter 0s and 1s.";
   _curSlide;
   slides;
   btnContainer;
@@ -77,9 +77,23 @@ export default class View {
     this._outputElement.value = output;
   }
 
-  errorRender() {
+  _generateErrorMsg(inputType) {
+    switch (inputType) {
+      case BINARY:
+        return "Can only enter 0 or 1 !";
+      case OCTAL:
+        return "Can only enter numbers between 0~7 !";
+      case HEXADECIMAL:
+        return "Can only enter numbers between 0~9 and characters between a~f !";
+      case DECIMAL:
+        return "Can only enter numbers between 0~9 !";
+    }
+  }
+
+  errorRender(inputType) {
     // show error message
-    this._messageContainer.firstElementChild.textContent = this._errMsg;
+    this._messageContainer.firstElementChild.textContent =
+      this._generateErrorMsg(inputType);
     this._messageContainer.classList.remove("hidden");
 
     // lock up the input area
