@@ -1,3 +1,4 @@
+// UNDO: check mechanism for different data type
 export const verficateInput = function (data, type) {
   if (
     type !== 3 &&
