@@ -1,79 +1,83 @@
-// UNDO: check mechanism for different data type
-export const verficateInput = function (data, type) {
-  if (
-    type !== 3 &&
-    data.length !== 0 &&
-    data.slice(-1) !== "0" &&
-    data.slice(-1) !== "1"
-  )
-    return false;
-
-  return true;
+import { BINARY, OCTAL, HEXADECIMAL, DECIMAL } from "./config.js";
+export const verificateInput = function (data, type) {
+  let reg;
+  switch (type) {
+    case BINARY:
+      reg = /^[01]+$/;
+      return reg.test(data);
+    case OCTAL:
+      reg = /^[0-7]+$/;
+      return reg.test(data);
+    case HEXADECIMAL:
+      reg = /^[0-9a-f]+$/i;
+      return reg.test(data);
+    case DECIMAL:
+      reg = /^[0-9]+$/;
+      return reg.test(data);
+  }
 };
 
 const binaryTo = function (data, outputType) {
   switch (outputType) {
-    case 0:
+    case BINARY:
       return data;
-    case 1: // Octal
+    case OCTAL:
       return (parseInt(data, 2) >>> 0).toString(8);
-    case 2: // Hexadecimal
+    case HEXADECIMAL:
       return (parseInt(data, 2) >>> 0).toString(16);
-    case 3: // Decimal
+    case DECIMAL:
       return parseInt(data, 2);
   }
 };
 
 const octalTo = function (data, outputType) {
   switch (outputType) {
-    case 0:
+    case BINARY:
       return (parseInt(data, 8) >>> 0).toString(2);
-    case 1:
+    case OCTAL:
       return data;
-    case 2:
+    case HEXADECIMAL:
       return (parseInt(data, 8) >>> 0).toString(16);
-    case 3:
+    case DECIMAL:
       return parseInt(data, 8);
   }
 };
 
 const hexTo = function (data, outputType) {
   switch (outputType) {
-    case 0:
+    case BINARY:
       return (parseInt(data, 16) >>> 0).toString(2);
-    case 1:
+    case OCTAL:
       return (parseInt(data, 16) >>> 0).toString(8);
-    case 2:
+    case HEXADECIMAL:
       return data;
-    case 3:
+    case DECIMAL:
       return parseInt(data, 16);
   }
 };
 
 const decimalTo = function (data, outputType) {
   switch (outputType) {
-    case 0:
+    case BINARY:
       return (data >>> 0).toString(2);
-    case 1: // Octal
+    case OCTAL:
       return (data >>> 0).toString(8);
-    case 2: // Hexadecimal
+    case HEXADECIMAL:
       return (data >>> 0).toString(16);
-    case 3: // Decimal
+    case DECIMAL:
       return data;
   }
 };
 
 export const convert = function (data, inputType, outputType) {
-  console.log(inputType, outputType);
-
   switch (inputType) {
-    case 0:
+    case BINARY:
       return binaryTo(data, outputType);
-    case 1:
+    case OCTAL:
       return octalTo(data, outputType);
-    case 2:
+    case HEXADECIMAL:
       return hexTo(data, outputType);
-    case 3:
+    case DECIMAL:
       return decimalTo(data, outputType);
   }
 };

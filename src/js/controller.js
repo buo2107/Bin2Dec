@@ -3,9 +3,10 @@ import RightCardView from "./rightCardView.js";
 import * as model from "./model.js";
 
 const controlEnter = function () {
-  //   console.log(type);
+  this.init();
   // Get input value
   const input = this.getInput();
+  if (input === "") return;
 
   // Verificate input value
   const inputType = this.getCurType();
@@ -13,10 +14,9 @@ const controlEnter = function () {
     this === LeftCardView
       ? RightCardView.getCurType()
       : LeftCardView.getCurType();
-  if (model.verficateInput(input, inputType)) {
+  if (model.verificateInput(input, inputType)) {
     // true: convert input value and render on ouput field
     const output = model.convert(input, inputType, outputType);
-    // console.log(output, typeof output);
     this.outputRender(output);
   } else {
     // false: render error message and lock up the input field

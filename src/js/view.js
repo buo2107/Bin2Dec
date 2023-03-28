@@ -8,6 +8,12 @@ export default class View {
   btnContainer;
   _maxSlide;
 
+  init() {
+    this._messageContainer.classList.add("hidden");
+    this._inputElement.setAttribute("maxlength", 15);
+    this._outputElement.value = "";
+  }
+
   getInput() {
     const input = this._inputElement.value;
     return input;
@@ -65,8 +71,7 @@ export default class View {
 
   outputRender(output) {
     // hide error message
-    this._messageContainer.classList.add("hidden");
-    this._inputElement.setAttribute("maxlength", 15);
+    this.init();
 
     // show converted value
     this._outputElement.value = output;
